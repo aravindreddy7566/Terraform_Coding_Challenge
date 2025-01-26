@@ -5,6 +5,11 @@
 
 This repository contains the Terraform configuration to provision AWS resources required for the Ansys Assessment. The configuration includes setting up a Virtual Private Cloud (VPC) with public and private subnets, an EC2 instance.
 
+## Prerequisites
+
+1. **Terraform**: Ensure you have Terraform installed. 
+2. **AWS CLI**: Make sure the AWS (CLI) is configured.
+
 
 ## Setting up AWS Credentials
 
@@ -67,3 +72,9 @@ Terraform resources can be destroyed using,
 terraform destroy --auto-approve
 ```
 
+## Logs
+
+The output of Terraform commands is saved in a transcript file. 
+```
+Terraform_Coding_Challenge_Shell.txt
+```
