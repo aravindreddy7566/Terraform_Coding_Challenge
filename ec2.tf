@@ -1,6 +1,6 @@
 resource "aws_instance" "nginx_instance_public" {
-  count                       = local.new_environment == "dev" ? 3 : 1
-  
+  count = local.new_environment == "dev" ? 3 : 1
+
   ami                         = var.imagename
   instance_type               = lookup(var.instance_type, local.new_environment)
   key_name                    = var.key_name
@@ -28,8 +28,8 @@ resource "aws_instance" "nginx_instance_public" {
 }
 
 resource "aws_instance" "nginx_instance_private" {
-  count                       = local.new_environment == "dev" ? 3 : 1
-  
+  count = local.new_environment == "dev" ? 3 : 1
+
   ami                         = var.imagename
   instance_type               = lookup(var.instance_type, local.new_environment)
   key_name                    = var.key_name
